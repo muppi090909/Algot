@@ -1,0 +1,7 @@
+[workspace]
+
+members = [
+	"lexer",
+	"parser",
+	"algot"
+]
