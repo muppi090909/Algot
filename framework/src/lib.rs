@@ -2,7 +2,9 @@ pub mod expressions {
     use std::{fmt, ops};
 
     #[derive(Debug, Clone, Copy, PartialEq)]
-    pub struct Decimal(pub f32);
+    pub struct Decimal(pub f64);
+    #[derive(Debug, Clone, Copy, PartialEq)]
+    pub struct Integer(pub i64);
     #[derive(Debug, Clone, Copy, PartialEq)]
     #[allow(dead_code)]
     enum Op {
@@ -13,6 +15,11 @@ pub mod expressions {
     }
     impl fmt::Display for Decimal {
         fn fmt(self: &Decimal, f: &mut fmt::Formatter) -> fmt::Result {
+            write!(f, "{}", self.0)
+        }
+    }
+    impl fmt::Display for Integer {
+        fn fmt(self: &Integer, f: &mut fmt::Formatter) -> fmt::Result {
             write!(f, "{}", self.0)
         }
     }
