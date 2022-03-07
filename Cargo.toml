@@ -4,5 +4,4 @@ members = [
 	"lexer",
 	"parser",
 	"algot",
-	"framework"
 ]
